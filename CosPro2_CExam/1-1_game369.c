@@ -11,9 +11,12 @@ int solution(int number) {
     // 3, 6, 9 숫자가 하나만 들어가도 박수갯수 1증가
     for (int i = 1; i <= number; i++) {
         current = i;
-        if (current % 10 == 3 || current % 10 == 6 || current % 10 == 9) //숫자 하나가 3,6,9중 하나라도 포함된다면
-            ++count;
-        current /= 10; // 1의 자리수 구하기.
+        while (current != 0) {
+            if (current % 10 == 3 || current % 10 == 6 || current % 10 == 9) //숫자 하나가 3,6,9중 하나라도 포함된다면
+                ++count;
+            current /= 10; // 1의 자리수 구하기.
+        }
+        
     }
     return count;
     // 박수의 갯수 리턴
