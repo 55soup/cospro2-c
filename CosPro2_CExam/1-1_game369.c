@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
-
+// [1차][빈칸] 문제1) 369 게임 박수의 갯수는?
 // 369게임 박수의 갯수를 구해라
 
 int solution(int number) {
