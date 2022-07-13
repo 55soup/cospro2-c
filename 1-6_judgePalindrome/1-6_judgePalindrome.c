@@ -7,17 +7,16 @@
 bool solution(char *str) {
     char* answer = (char*)malloc(sizeof(char) * 103);
     //. 과 공백 제s거한 문자열 저장
-    int count = 0; // 문자열의 길이 저장
-    int len = 0;
+    int len = 0;// 문자열의 길이 저장
     for (int i = 0; i < strlen(str); i++) {
         if (str[i] != ' ' && str[i] != '.') {
             answer[len++] = str[i];
-            ++count;
         }
     }
+
     // 문자열 비교
-    for (int i = 0; i < count; i++) {
-        if (answer[i] != answer[count - i - 1])
+    for (int i = 0; i < len; i++) {
+        if (answer[i] != answer[len - i - 1])
             return false;
     }
     return true;
