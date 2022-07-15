@@ -15,7 +15,7 @@ bool solution(char *str) {
     }
 
     // 문자열 비교
-    for (int i = 0; i < len; i++) {
+    for (int i = 0; i < len/2; i++) {
         if (answer[i] != answer[len - i - 1])
             return false;
     }
