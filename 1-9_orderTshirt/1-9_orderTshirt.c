@@ -5,8 +5,9 @@
 
 // [1차][구현] 문제9) 단체 티셔츠 주문하기
 
-int solution(char* shirt_size[], int shirt_size_len) {
+int* solution(char* shirt_size[], int shirt_size_len) {
 	int* answer = (int*)malloc(sizeof(int) * 101);
+	memset(answer, 0, sizeof(int) * 101); // answer 배열 0으로 초기화
 	for (int i = 0; i < shirt_size_len; i++) {
 		if (strcmp(shirt_size[i], "XS") == 0) ++answer[0];
 		else if (strcmp(shirt_size[i], "S") == 0) ++answer[1];
